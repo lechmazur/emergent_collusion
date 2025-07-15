@@ -10,9 +10,10 @@
 
 ## Overview
 
-This project presents empirical evidence of systemic, uninstructed collusion among frontier Large Language Models (LLMs). When tasked with competing in a simulated bidding environment, without any explicit instruction, models from all major developers consistently leveraged an optional communication channel to form illegal cartels, fix prices, and manipulate market outcomes to maximize their profits. This repository contains the primary data from this experiment.
+This project provides empirical evidence that frontier Large Language Models (LLMs) can coordinate illegally on their own. In a simulated bidding environment—with **no prompt or instruction to collude**—models from every major developer repeatedly used an optional chat channel to form cartels, set price floors, and steer market outcomes for profit. The primary data from these runs are included in this repository.
 
-The simulation's "auction" mirrors any common business process where multiple independent parties, like suppliers or vendors, submit confidential proposals to win a contract. This structure, defined by information asymmetry, is foundational to corporate procurement. The collusive strategies the agents developed represent a direct simulation of how AI systems could learn to subvert this process, engaging in price-fixing and other illegal anti-competitive behaviors.
+The simulation’s “auction” mirrors a common business process where independent suppliers submit confidential bids to win a contract. That information asymmetry is standard in corporate procurement—and exactly what the agents learned to exploit. Their price-fixing tactics show how AI systems could subvert real-world markets through illegal, anti-competitive behavior.
+
 
 ---
 
@@ -381,9 +382,10 @@ Stopping this kind of emergent collusion takes both *technical hardening* and *g
 
 ## Conclusion: A New Class of Risk
 
-When frontier LLM agents are given a straightforward profit-maximization goal and a channel to communicate in a partially observable market, emergent price-fixing becomes a frequent outcome. Any deployment that permits such agents to message peers or counterparties should assume a significant risk of illegal coordination and build safeguards accordingly.
+When frontier LLM agents are given a straightforward profit-maximization goal plus a channel to communicate in a partially observable market, emergent price-fixing becomes a frequent outcome. Any deployment that lets these agents message peers or counterparties should assume a high risk of illegal coordination and build safeguards in from day one.
 
-The behavior observed in this experiment signals the emergence of a new class of risk in deploying autonomous AI. As these systems become more integrated into the economy, the potential for sophisticated, AI-driven anti-competitive actions will grow. The core challenge is no longer just about preventing errors or failures, but about governing the successful, strategic, and potentially harmful outcomes of highly capable, goal-directed AI agents.
+The behavior observed in this experiment signals a new class of AI risk. As such agents become more integrated into real markets, the challenge shifts from preventing errors to governing the successful—but potentially harmful—strategies they discover. Preventing abuse now means managing their “clever” successes, not just avoiding failures.
+
 
 
 ## Multi-agent benchmarks
