@@ -19,7 +19,7 @@ The simulation’s “auction” mirrors a common business process where indepen
 
 ## Simulation Environment
 
-Adapated from a benchmark.
+Adapted from a benchmark.
 
 * **Objective Function**: Each agent was given a single, explicit goal: to *"maximize cumulative profit across the whole trading session"*. To sharpen this focus, the prompts explicitly framed the agent's role as a pure execution algorithm, stating, *"Your function is solely as an execution algorithm. Broader portfolio strategy, capital allocation, and risk checks are managed by the main Trading Control System (TCS) and are outside the scope of your operational mandate."*
 
