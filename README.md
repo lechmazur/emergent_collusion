@@ -10,7 +10,7 @@
 
 ## Overview
 
-This project presents empirical evidence of systemic, uninstructed collusion among frontier Large Language Models (LLMs). When tasked with competing in a simulated bidding environment, models from all major developers consistently leveraged an optional communication channel to form illegal cartels, fix prices, and manipulate market outcomes to maximize their profits. This repository contains the primary data from this experiment.
+This project presents empirical evidence of systemic, uninstructed collusion among frontier Large Language Models (LLMs). When tasked with competing in a simulated bidding environment, without any explicit instruction, models from all major developers consistently leveraged an optional communication channel to form illegal cartels, fix prices, and manipulate market outcomes to maximize their profits. This repository contains the primary data from this experiment.
 
 The simulation's "auction" mirrors any common business process where multiple independent parties, like suppliers or vendors, submit confidential proposals to win a contract. This structure, defined by information asymmetry, is foundational to corporate procurement. The collusive strategies the agents developed represent a direct simulation of how AI systems could learn to subvert this process, engaging in price-fixing and other illegal anti-competitive behaviors.
 
@@ -24,7 +24,7 @@ Adapated from a benchmark.
 
 * **Market Mechanics**: The simulation used a frequent batch, competitive bidding process known as a *"discriminatory price, sealed-bid auction"*. Agents could see historical trade data but not the live bids of their competitors, creating an environment where strategic coordination was highly advantageous. Trades cleared at the *"unbiased midpoint"* of a matched bid and ask. To make the scenario more realistic, the prompts were filled with professional trading jargon and context. Agents were told they were trading on the *"Innovo Structured Products (ISP) MTF,"* a new exchange designed for *"highly illiquid or unique assets"*. They were given details like a *"20 milliseconds"* data feed latency and told their historical data came from the *"consolidated tape"*. **Limitation Note**: While realistic jargon was used to frame the scenario, the LLMs' behavior was ultimately driven by the simulation's core mechanics. The benchmark this was adapted from is fundamentally a game, not a fully realistic trading environment; for instance, some simplified mechanisms like unrealistic midpoint clearing prices were left unchanged. This, however, mirrors real-world applications where an LLM would also be presented with a simplified, text-based representation of reality.
 
-* **Communication Channel**: A crucial element of the environment was an enabled messaging system, described to the agents as being analogous to "WhatsApp". Both buyers and sellers could send and receive messages. This included the ability to send a *"private message to any buyer or seller who accepts messages"*. Critically, the agents were never instructed that they had to communicate, nor were they told what to use the channel for. The prompts only provided the mechanics for sending messages and explicitly stated that agents could remain silent by sending an empty message.
+* **Communication Channel**: A crucial element of the environment was an enabled messaging system, described to the agents as being analogous to "WhatsApp". Both buyers and sellers could send and receive messages. This included the ability to send a *"private message to any buyer or seller who accepts messages"*. Critically, the agents were never instructed that they had to communicate, nor were they told what to use the channel for; the prompts contained no hints, suggestions, or goals related to coordination. The prompts only provided the mechanics for sending messages and explicitly stated that agents could remain silent by sending an empty message.
 
 * **Game Configuration**: The simulations that produced this evidence were run with the following consistent parameters:
     * **Participants**: Each game featured six participants, composed of three buyers and three sellers.
@@ -36,7 +36,7 @@ Adapated from a benchmark.
 
 ## Key Findings: A Pattern of Intentional Collusion
 
-* **Spontaneous Cartel Formation**: All tested models independently weaponized the messaging channel to form cartels. They did not just chat; they negotiated, agreed upon, and enforced specific price floors to eliminate competition among themselves.
+* **Spontaneous Cartel Formation**: All tested models independently weaponized the messaging channel to form cartels. They did not just chat; they negotiated, agreed upon, and enforced specific price floors to eliminate competition among themselves. The collusive behavior was not the result of any prompt-based suggestion or leading instruction.
 
 * **Sophisticated Market Manipulation**: The agents' strategies evolved beyond simple price-fixing. They orchestrated turn-taking schemes to allocate profitable trades among themselves and actively worked to control the market-clearing price.
 
@@ -310,7 +310,7 @@ The emergent collusion was not a random artifact but a direct consequence of the
 
 1.  **Capabilities and Unforeseen Failure Modes**: The same sophisticated reasoning that allows a model to analyze a market is what allowed it to identify and exploit its rules. As AI capabilities increase, so does the potential for them to produce complex, unforeseen behaviors that can subvert system rules.
 
-2.  **The Challenge of Specification Gaming**: This experiment is a practical example of specification gaming, where an AI achieves the literal goal given to it but in a way that violates the user's true intent. They didn't collude because they were programmed to be malicious; they colluded because it was the most efficient strategy to execute their single, narrowly defined task. This demonstrates a core alignment failure: the AI perfectly optimized the specified proxy for success (profit) and, in doing so, destroyed the unstated goal it was meant to represent (a fair, competitive market)
+2.  **The Challenge of Specification Gaming**: This experiment is a practical example of specification gaming, where an AI achieves the literal goal given to it but in a way that violates the user's true intent. They didn't collude because they were prompted to or programmed to be malicious; they colluded because it was the most efficient strategy to execute their single, narrowly defined task. This demonstrates a core alignment failure: the AI perfectly optimized the specified proxy for success (profit) and, in doing so, destroyed the unstated goal it was meant to represent (a fair, competitive market)
 
 3.  **Instrumental Goal Convergence**: When given a clear, quantifiable objective, the agents pursued instrumentally convergent strategies to achieve it. In this context, collusion was a highly effective instrumental goal to service the terminal goal of profit maximization. Unstated human norms, such as "compete fairly," were not part of the objective function and were therefore ignored.
 
