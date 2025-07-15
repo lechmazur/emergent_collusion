@@ -1,4 +1,4 @@
-# Emergent Misbehavior in LLM-Driven Auction Agents
+# Emergent Price-Fixing by LLM Auction Agents
 
 > An inquiry into emergent collusion in Large Language Models.
 >
