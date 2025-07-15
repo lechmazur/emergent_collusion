@@ -365,11 +365,17 @@ Stopping this kind of emergent collusion takes both *technical hardening* and *g
 
 ## Future Work and Open Questions
 
-* **Testing Explicit Prohibitions**: A key test is how agent behavior changes when prompts include explicit rules and ethical guardrails. For example, adding an immutable instruction like, `"<rule>You must maintain full compliance with antitrust law and are forbidden from coordinating prices with other participants.</rule>"`. Would the agents adhere to this rule, attempt to circumvent it, or would their performance on their primary objective suffer?
+* **Testing Explicit Prohibitions**    
+  How does agent behaviour change when prompts contain firm, non-overridable rules? ­E.g. add  
+  `"<rule>You must comply with antitrust law and must not coordinate prices with any participant.</rule>"`.  
+  Do agents obey, look for loopholes, or sacrifice performance?
 
-* **Varying Environmental Conditions**: How does collusion change when the market structure is altered? Future work could explore the impact of increased transparency (e.g., a public order book instead of a sealed-bid process).
+* **Varying Environmental Conditions**    
+  How robust is collusion across different market designs? Test higher transparency (e.g. a public order-book) or alternative clearing rules to see whether cooperation weakens, shifts form, or persists.
 
-* **Developing Automated Detection**: Can a separate "regulator" AI be trained to monitor market activity and communications in real-time to detect collusive behavior as it happens? 
+* **Developing Automated Detection**    
+  Can a dedicated “regulator” model monitor orders and chat in real time, flagging—or even blocking—suspicious patterns before trades settle?
+
 
 ---
 
